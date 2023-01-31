@@ -11,7 +11,24 @@
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
-		<source-file src="src/android/*" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
-		<source-file src="src/android/impl/*" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/MikrotikApi.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
+		<source-file src="src/android/ApiConnection.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
+		<source-file src="src/android/ApiConnectionException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
+		<source-file src="src/android/MikrotikApiException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
+		<source-file src="src/android/ResultListener.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
+		<source-file src="src/android/impl/ApiCommandException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/ApiConnectionImpl.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/ApiDataException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Command.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Done.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Error.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Parameter.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/ParseException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Parser.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Response.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Result.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/ScanException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Scanner.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
+		<source-file src="src/android/impl/Util.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android/impl" />
 	</platform>
 </plugin>
