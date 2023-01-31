@@ -4,7 +4,7 @@ this plugin adapted from mikrotik java api writen by GideonLeGrange (https://git
 
 simply, this plugin can help you execute command to RouterOS a.k.a Mikrotik from android app build with cordova  
 
-### tested on:
+### Tested on:
 
 - NodeJS  	      : 19.4.0
 - Cordova 	      : 11.1.0
