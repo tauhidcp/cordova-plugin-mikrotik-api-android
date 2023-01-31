@@ -58,13 +58,11 @@ function getData(){
 	
 	function onSuccess(s){
 		
-		var result = s.substring(1, s.length-1);
-		var iface  = result.split("][");
+		var rs = JSON.parse(s);
 		
-		for (var i=0; i<iface.length; i++){
-			
-			document.getElementById("iface_list").innerHTML += i+". "+iface[i]+"</br></br>"; 
-		}
+		rs.forEach(function(obj){
+			document.getElementById("iface_list").innerHTML += obj['.id']+". "+obj['name']+" | "+obj['mac-address']+"</br></br>"; // get by name key 
+		});
     }
 
 	function onError(e){
