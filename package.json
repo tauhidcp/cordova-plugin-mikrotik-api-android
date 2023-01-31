@@ -1,0 +1,25 @@
+{
+  "name": "id.my.tauhidslab.mikrotik.api",
+  "version": "0.1.0",
+  "description": "cordova plugin to execute mikrotik command through android app",
+  "cordova": {
+    "id": "id.my.tauhidslab.mikrotik.api",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tauhidcp/cordova-plugin-mikrotik-api-android.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Ahmad Tauhid, S.Kom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tauhidcp/cordova-plugin-mikrotik-api-android/issues"
+  },
+  "homepage": "https://github.com/tauhidcp/cordova-plugin-mikrotik-api-android#readme"
+}
