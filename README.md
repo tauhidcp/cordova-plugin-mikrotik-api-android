@@ -59,9 +59,12 @@ function getData(){
 	cordova.plugins.MikrotikApi.getCommand(cmd, onSuccess, onError);
 	
 	function onSuccess(s){
-       
-		document.getElementById("iface_list").innerHTML = s; 
 		
+		var rs = JSON.parse(s);
+		
+		rs.forEach(function(obj){
+			document.getElementById("iface_list").innerHTML += obj['.id']+". "+obj['name']+" | "+obj['mac-address']+"</br></br>"; // get by name key 
+		});
     }
 
 	function onError(e){
