@@ -65,8 +65,8 @@ public class MikrotikApi extends CordovaPlugin {
 						this.arr += this.data.get(i).entrySet().toString();
 
 					}
-
-					callbackContext.success(this.arr);
+					String replacement = "["+removeLastChar(this.arr.replace("[", "{'").replace("]", "'},").replace("=", "':'").replace(", ", "','"))+"]";
+					callbackContext.success(replacement.replace("'", "\""));
 				} else {
 					callbackContext.success(this.arr);
 				}
@@ -81,6 +81,12 @@ public class MikrotikApi extends CordovaPlugin {
             callbackContext.error("you are not connected, login first!");
         }
     }
+	
+	public static String removeLastChar(String s) {
+    return (s == null || s.length() == 0)
+      ? null 
+      : (s.substring(0, s.length() - 1));
+}
 	
 	private void execCommand(String message, CallbackContext callbackContext) {
 		
