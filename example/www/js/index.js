@@ -57,9 +57,14 @@ function getData(){
 	cordova.plugins.MikrotikApi.getCommand(cmd, onSuccess, onError);
 	
 	function onSuccess(s){
-       
-		document.getElementById("iface_list").innerHTML = s; 
 		
+		var result = s.substring(1, s.length-1);
+		var iface  = result.split("][");
+		
+		for (var i=0; i<iface.length; i++){
+			
+			document.getElementById("iface_list").innerHTML += i+". "+iface[i]+"</br></br>"; 
+		}
     }
 
 	function onError(e){
