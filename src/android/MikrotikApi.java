@@ -59,14 +59,17 @@ public class MikrotikApi extends CordovaPlugin {
 			
 				this.data = this.getCMD(message);
 				
-				for (int i=0; i<this.data.size(); i++) {
-					
-					this.arr += this.data.get(i).entrySet().toString();
-					
+				if (this.data.size()>=1){
+					for (int i=0; i<this.data.size(); i++) {
+
+						this.arr += this.data.get(i).entrySet().toString();
+
+					}
+
+					callbackContext.success(this.arr);
+				} else {
+					callbackContext.success(this.arr);
 				}
-				
-				callbackContext.success(this.arr);
-				
 			} else {
 				
 				callbackContext.error("don't pass empty string!");
@@ -120,7 +123,7 @@ public class MikrotikApi extends CordovaPlugin {
 		
 		} else {
 			
-            callbackContext.error("Expected one non-empty string argument.");
+            callbackContext.error("don't pass empty string!");
         }
     }
 	
