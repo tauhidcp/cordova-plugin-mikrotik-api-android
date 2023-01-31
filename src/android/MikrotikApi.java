@@ -11,14 +11,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * This class echoes a string called from JavaScript.
+ * 
  * @author Ahmad Tauhid, S.Kom (https://github.com/tauhidcp)
  * 
  * http://www.tauhidslab.my.id/
  *
  * https://github.com/tauhidcp/cordova-plugin-mikrotik-api-android
  *
- */
+ **/
  
 public class MikrotikApi extends CordovaPlugin {
 
@@ -60,16 +60,21 @@ public class MikrotikApi extends CordovaPlugin {
 				this.data = this.getCMD(message);
 				
 				if (this.data.size()>=1){
+					
 					for (int i=0; i<this.data.size(); i++) {
 
 						this.arr += this.data.get(i).entrySet().toString();
 
 					}
+					
 					String replacement = "["+removeLastChar(this.arr.replace("[", "{'").replace("]", "'},").replace("=", "':'").replace(", ", "','"))+"]";
 					callbackContext.success(replacement.replace("'", "\""));
+					
 				} else {
+					
 					callbackContext.success(this.arr);
 				}
+				
 			} else {
 				
 				callbackContext.error("don't pass empty string!");
