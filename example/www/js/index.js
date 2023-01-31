@@ -58,7 +58,7 @@ function getData(){
 	
 	function onSuccess(s){
 		
-		var rs = JSON.parse(s);
+		var rs = JSON.parse(s); // parse output to JSON
 		
 		rs.forEach(function(obj){
 			document.getElementById("iface_list").innerHTML += obj['.id']+". "+obj['name']+" | "+obj['mac-address']+"</br></br>"; // get by name key 
