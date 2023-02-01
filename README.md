@@ -13,9 +13,13 @@ simply, this plugin can help you execute command to RouterOS a.k.a Mikrotik from
 
 ### How to use
 
-install using this command
+install from github repository using this command
 ```
 cordova plugin add https://github.com/tauhidcp/cordova-plugin-mikrotik-api-android.git
+```
+or install from npmjs package using this command 
+```
+cordova plugin add id.my.tauhidslab.mikrotik.api
 ```
 
 uninstall using this command
