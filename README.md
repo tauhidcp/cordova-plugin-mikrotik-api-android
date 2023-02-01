@@ -37,8 +37,9 @@ function Login(){
 	var host = document.getElementById("host").value;
 	var user = document.getElementById("user").value;
 	var pass = document.getElementById("pass").value;
+	var port = 8728; // default port 
 	
-	cordova.plugins.MikrotikApi.Login(host, user, pass, onSuccess, onError);
+	cordova.plugins.MikrotikApi.Login(host, user, pass, port, onSuccess, onError);
 	
 	function onSuccess(s){
         alert(s);
