@@ -56,8 +56,8 @@ public abstract class ApiConnection implements AutoCloseable {
      * @throws me.legrange.mikrotik.MikrotikApiException Thrown if there is a
      * problem connecting
      */
-    public static ApiConnection connect(String host) throws MikrotikApiException {
-        return connect(SocketFactory.getDefault(), host, DEFAULT_PORT, DEFAULT_COMMAND_TIMEOUT);
+    public static ApiConnection connect(String host, int port) throws MikrotikApiException {
+        return connect(SocketFactory.getDefault(), host, port, DEFAULT_COMMAND_TIMEOUT);
     }
 
     /**

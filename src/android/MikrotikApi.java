@@ -44,7 +44,8 @@ public class MikrotikApi extends CordovaPlugin {
             String host = args.getString(0);
             String user = args.getString(1);
             String pass = args.getString(2);
-			this.Login(host, user, pass, callbackContext);
+            int port = args.getString(3);
+			this.Login(host, user, pass, port, callbackContext);
             return true;
         }
 		
@@ -116,11 +117,11 @@ public class MikrotikApi extends CordovaPlugin {
 		
     }
 	
-	private void Login(String host, String user, String pass, CallbackContext callbackContext) {
+	private void Login(String host, String user, String pass, int port, CallbackContext callbackContext) {
 		
         if (host != null && host.length() > 0 && user != null && user.length() > 0) {	
 		
-			this.con = getCon(host, user, pass);
+			this.con = getCon(host, user, pass, port);
 			
 			if (this.con != null){
 				
@@ -174,13 +175,13 @@ public class MikrotikApi extends CordovaPlugin {
 		return cmd;
 	}
 	
-	public ApiConnection getCon(String host, String user, String pass){
+	public ApiConnection getCon(String host, String user, String pass, int port){
     
 		ApiConnection conn = null;
     
 		try {
 			
-			conn = ApiConnection.connect(host); 
+			conn = ApiConnection.connect(host, port); 
 		
             try {
 			
