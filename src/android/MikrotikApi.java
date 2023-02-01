@@ -44,7 +44,7 @@ public class MikrotikApi extends CordovaPlugin {
             String host = args.getString(0);
             String user = args.getString(1);
             String pass = args.getString(2);
-            int port = args.getString(3);
+            int port = args.getInt(3);
 			this.Login(host, user, pass, port, callbackContext);
             return true;
         }
