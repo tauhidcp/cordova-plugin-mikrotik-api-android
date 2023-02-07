@@ -11,6 +11,10 @@
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		</config-file>
 		<source-file src="src/android/MikrotikApi.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
 		<source-file src="src/android/ApiConnection.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
 		<source-file src="src/android/ApiConnectionException.java" target-dir="src/id/my/tauhidslab/mikrotik/api/cordova-plugin-mikrotik-api-android" />
